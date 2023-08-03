@@ -2,6 +2,9 @@ import React from 'react'
 import styles from './NavMenu.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import SignInButton from '@/components/SignInButton'
+import AuthCheck from '@/components/AuthCheck'
+import SignOutButton from '@/components/SignOutButton'
 
 const NavMenu = () => {
   return (
@@ -23,6 +26,14 @@ const NavMenu = () => {
         </li>
         <li>
           <Link href={'/users'}>Users</Link>
+        </li>
+        <li>
+          <SignInButton />
+        </li>
+        <li>
+          <AuthCheck>
+            <SignOutButton />
+          </AuthCheck>
         </li>
       </ul>
     </nav>
